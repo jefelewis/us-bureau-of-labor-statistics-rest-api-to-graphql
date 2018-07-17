@@ -1,7 +1,10 @@
 // GraphQL: TypeDefs
 const TYPEDEFS = `
   type Query {
-    getNationalEmploymentHoursAndEarnings(id: String): RootQuery
+    getNationalEmploymentHoursAndEarnings: RootQuery
+    getNationalEmploymentHoursAndEarningsSIS: RootQuery
+    getStateAndAreaEmploymentHoursAndEarnings: RootQuery
+    getStateAndAreaEmploymentHoursAndEarningsSIS: RootQuery
   }
 
   type RootQuery {
