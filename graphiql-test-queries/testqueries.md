@@ -1,5 +1,5 @@
 {
-  getNationalEmploymentHoursAndEarnings(id: "CEU0800000003"){
+  getNationalEmploymentHoursAndEarnings {
     status
     responseTime
     Results {
