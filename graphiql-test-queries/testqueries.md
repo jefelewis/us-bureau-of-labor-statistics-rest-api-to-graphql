@@ -1,7 +1,10 @@
 {
-  getNationalEmploymentHoursAndEarnings {
+  getNationalEmploymentHoursAndEarnings(seasonalAdjustmentCode: "S", superSectorCode: "90", industryCode: "90000000", dataTypeCode: "01"){
     status
     responseTime
+    message {
+      name
+    }
     Results {
       series {
         seriesID
@@ -11,7 +14,7 @@
           periodName
           latest
           value
-          footnotes {
+          footnotes{
             code
             text
           }
