@@ -7,6 +7,9 @@ const fetch = require('node-fetch');
 // GraphQL: Resolvers
 const RESOLVERS = {
   Query: {
+
+
+    // EMPLOYMENT & UNEMPLOYMENT
     // Series ID: CEU0800000003
     getNationalEmploymentHoursAndEarnings: async (parent, args) => {
       const response = await
@@ -91,6 +94,9 @@ const RESOLVERS = {
       fetch(`https://api.bls.gov/publicAPI/v2/timeseries/data/GGUQO100000000000050010L`);
       return response.json();
     },
+
+
+    // SPENDING & TIME USE
     // Series ID: TUU10101AA01011987
     getAmericanTimeUseSurvey: async (parent, args) => {
       const response = await
@@ -103,6 +109,9 @@ const RESOLVERS = {
       fetch(`https://api.bls.gov/publicAPI/v2/timeseries/data/CXUMENBOYSLB0101M`);
       return response.json();
     },
+
+
+    // INFLATION & PRICES
     // Series ID: APU000070111
     getAveragePriceData: async (parent, args) => {
       const response = await
@@ -175,6 +184,9 @@ const RESOLVERS = {
       fetch(`https://api.bls.gov/publicAPI/v2/timeseries/data/WDU062201`);
       return response.json();
     },
+
+
+    // PAY & BENEFITS
     // Series ID: WSUB00 
     getWorkStoppageData: async (parent, args) => {
       const response = await
@@ -217,6 +229,9 @@ const RESOLVERS = {
       fetch(`https://api.bls.gov/publicAPI/v2/timeseries/data/WMU40000011020000004130992500`);
       return response.json();
     },
+
+
+    // PRODUCTIVITY
     // Series ID: PRS85006032
     getMajorSectorProductivityAndCosts: async (parent, args) => {
       const response = await
@@ -235,6 +250,9 @@ const RESOLVERS = {
       fetch(`https://api.bls.gov/publicAPI/v2/timeseries/data/IPUBN212___W000`);
       return response.json();
     },
+
+
+    // WORKPLACE INJURIES
     // Series ID: ISU00X00000060N00
     getOccupationalInjuriesAndIllnessesIndustry2014Forward: async (parent, args) => {
       const response = await
@@ -307,12 +325,18 @@ const RESOLVERS = {
       fetch(`https://api.bls.gov/publicAPI/v2/timeseries/data/IIU00X00000060N00`);
       return response.json();
     },
+
+
+    // OCCUPATIONAL
     // Series ID: ORUV1000000000001029
     getOccupationalRequirementsSurvey: async (parent, args) => {
       const response = await
       fetch(`https://api.bls.gov/publicAPI/v2/timeseries/data/ORUV1000000000001029`);
       return response.json();
     },
+
+
+    // INTERNATIONAL
     // Series ID: EIUCOCANMANU
     getImporExportPriceIndexes: async (parent, args) => {
       const response = await
