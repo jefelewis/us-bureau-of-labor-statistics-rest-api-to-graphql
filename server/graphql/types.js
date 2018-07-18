@@ -1,10 +1,10 @@
 // GraphQL: TypeDefs
 const TYPEDEFS = `
   type Query {
-    getNationalEmploymentHoursAndEarnings: RootQuery
-    getNationalEmploymentHoursAndEarningsSIS: RootQuery
-    getStateAndAreaEmploymentHoursAndEarnings: RootQuery
-    getStateAndAreaEmploymentHoursAndEarningsSIS: RootQuery
+    getNationalEmploymentHoursAndEarnings(seasonalAdjustmentCode: String, superSectorCode: String, industryCode: String, dataTypeCode: String): RootQuery
+    getNationalEmploymentHoursAndEarningsSIS(seasonalAdjustmentCode: String, industryCode: String, dataTypeCode: String): RootQuery
+    getStateAndAreaEmploymentHoursAndEarnings(seasonalAdjustmentCode: String, superSectorCode: String, industryCode: String, dataTypeCode: String): RootQuery
+    getStateAndAreaEmploymentHoursAndEarningsSIS(seasonalAdjustmentCode: String, industryCode: String, dataTypeCode: String): RootQuery
   }
 
   type RootQuery {
