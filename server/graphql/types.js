@@ -1,5 +1,10 @@
+// Imports: GraphQL
+import { gql } from 'apollo-server-express';
+
+
 // GraphQL: TypeDefs
-const TYPEDEFS = `
+const TYPEDEFS = gql`
+
   type Query {
     getNationalEmploymentHoursAndEarnings(seasonalAdjustmentCode: String, superSectorCode: String, industryCode: String, dataTypeCode: String): RootQuery
     getNationalEmploymentHoursAndEarningsSIS(seasonalAdjustmentCode: String, industryCode: String, dataTypeCode: String): RootQuery
